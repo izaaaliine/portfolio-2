@@ -1,0 +1,46 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Quicksand", sans-serif;
+}
+/* Home */
+.home {
+  height: 100vh;
+  width: 100vw;
+}
+.imgHome {
+  background-image: url(../img/imgHome2.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+}
+.navBar {
+  display: flex;
+  justify-content: space-around;
+  color: white;
+  width: 100vw;
+  height: 10vh;
+  opacity: 0.8;
+}
+.navBar div {
+  margin-top: 5vh;
+}
+.navBar div:nth-child(1n):not(:nth-child(3)):hover {
+  font-weight: bold;
+}
+.logo {
+  aspect-ratio: 1;
+  width: 6vw;
+  margin-top: -2vh;
+  animation: spin infinite 10s linear;
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+/* Page 2 */
