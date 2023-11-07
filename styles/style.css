@@ -18,6 +18,7 @@ body {
 .navBar {
   display: flex;
   justify-content: space-around;
+  align-content: center;
   color: white;
   width: 100vw;
   height: 10vh;
@@ -43,9 +44,17 @@ body {
     transform: rotate(360deg);
   }
 }
+/* menu burger */
+
+.burger {
+  height: 30px;
+  width: 30px;
+  margin-top: -2px;
+  display: none;
+}
 /* Page 2 */
 .imgPage2 {
-  background-image: url(../img/imgpage22.jpg);
+  background-image: url(../img/pexels-francesco-ungaro-2325446.jpg);
   width: 100vw;
   height: 100vh;
   background-position: center;
@@ -53,7 +62,6 @@ body {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   grid-template-rows: repeat(10, 10vh);
-  opacity: 0.9;
 }
 .montgolfiere1 {
   grid-column: 1;
@@ -121,9 +129,87 @@ body {
 }
 /* Page 3 */
 .imgPage3 {
-  background-image: url(../img/imgPage3.jpg);
   width: 100vw;
   height: 100vh;
+  background-image: url(../img/page3img.jpg);
   background-position: center;
   background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.scene {
+  width: 300px;
+  height: 140px;
+  position: relative;
+  perspective: 1000px;
+}
+.carousel {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transform-style: preserve-3d;
+}
+.carousel-item {
+  position: absolute;
+  width: 190px;
+  height: 120px;
+  left: 10px;
+  top: 10px;
+  border-radius: 5px;
+}
+.carousel-item:nth-child(1) {
+  background-image: url(..//img/img1.jpg);
+  background-position: center;
+  background-size: cover;
+  transform: rotateY(0deg) translateZ(259.8076px);
+}
+.carousel-item:nth-child(2) {
+  background-image: url(..//img/img2.jpg);
+  background-position: center;
+  background-size: cover;
+  transform: rotateY(72deg) translateZ(259.8076px);
+}
+.carousel-item:nth-child(3) {
+  background-image: url(..//img/img3.jpg);
+  background-position: center;
+  background-size: cover;
+  transform: rotateY(144deg) translateZ(259.8076px);
+}
+.carousel-item:nth-child(4) {
+  background-image: url(..//img/img4.jpg);
+  background-position: center;
+  background-size: cover;
+  transform: rotateY(216deg) translateZ(259.8076px);
+}
+.carousel-item:nth-child(5) {
+  background-image: url(..//img/img5.jpg);
+  background-position: center;
+  background-size: cover;
+  transform: rotateY(288deg) translateZ(259.8076px);
+}
+/* Page 4 */
+
+.Page4 {
+  width: 100vw;
+  height: 100vh;
+  background-image: url(../vidéos/backgroundPage4.mp4);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+}
+
+/* Format Téléphone */
+@media screen and (max-width: 767px) {
+}
+
+/* Format Tablette */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+}
+
+/* Format Ordinateur */
+@media screen and (min-width: 1024px) {
+  .burger {
+    display: none;
+  }
 }
