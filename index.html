@@ -7,25 +7,41 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles/style.css" />
   </head>
   <body>
     <!-- Home -->
-    <div class="imgHome">
+    <div class="imgHome" id="home">
       <nav class="navBar">
-        <div>About me</div>
-        <div>Skills</div>
+        <a href="#home"><div class="navBarInfo">About me</div></a>
+        <a href="#skills"><div class="navBarInfo">Skills</div></a>
         <div><img src="img/logo.png" alt="" class="logo" /></div>
-        <div>My Projects</div>
-        <div>Contact</div>
-        <!-- menu burger -->
+        <a href="#project"><div class="navBarInfo">Projects</div></a>
+        <a href="#contact"><div class="navBarInfo">Contact</div></a>
       </nav>
+      <!-- menu burger -->
+      <div class="hamburger-menu">
+        <input id="menu__toggle" type="checkbox" />
+        <label class="menu__btn" for="menu__toggle">
+          <span></span>
+        </label>
+        <ul class="menu__box">
+          <li><a class="menu__item" href="#home">About Me</a></li>
+          <li><a class="menu__item" href="#skills">Skills</a></li>
+          <li><a class="menu__item" href="#project">Projects</a></li>
+          <li><a class="menu__item" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="presentation">
+        <p>I am Izaline Dhalluin a web developer and this is my world</p>
+      </div>
     </div>
+
     <!-- Page 2 -->
-    <div class="imgPage2">
+    <div class="imgPage2" id="skills">
       <div class="montgolfiere1">
         <img src="img/ballonHtml.png" alt="" class="montgolfiere1" />
       </div>
@@ -53,7 +69,7 @@
       </div>
     </div>
     <!-- Page3 -->
-    <div class="imgPage3">
+    <div class="imgPage3" id="project">
       <div class="scene">
         <div class="carousel">
           <div class="carousel-item"></div>
@@ -65,6 +81,33 @@
       </div>
     </div>
     <!-- Page4 -->
-    <div class="Page4"></div>
+    <div class="Page4" id="contact">
+      <div class="formulaireContact">
+        <h2>Contact Me</h2>
+        <form action="">
+          <div class="input-wrapper">
+            <label for="name">Name</label>
+            <br />
+            <input type="text" name="name" id="name" required />
+          </div>
+          <div class="input-wrapper">
+            <label for="name">Phone</label>
+            <br />
+            <input type="text" name="phone" id="phone" required />
+          </div>
+          <div class="input-wrapper">
+            <label for="mail">Mail</label>
+            <br />
+            <input type="text" name="mail" id="mail" required />
+          </div>
+          <div class="input-wrapper">
+            <label for="message">Message</label>
+            <br />
+            <textarea name="message" id="message" rows="5"></textarea>
+          </div>
+          <input type="submit" value="Send" />
+        </form>
+      </div>
+    </div>
   </body>
 </html>
